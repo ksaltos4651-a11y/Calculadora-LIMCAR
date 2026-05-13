@@ -1,0 +1,152 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
+
+.calculadora{
+    width: 100%;
+    max-width: 380px;
+
+    background: rgba(255,255,255,0.08);
+
+    border: 1px solid rgba(255,255,255,0.2);
+
+    backdrop-filter: blur(10px);
+
+    border-radius: 20px;
+
+    padding: 25px;
+
+    box-shadow: 0px 8px 30px rgba(0,0,0,0.4);
+}
+
+.calculadora h1{
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+
+    font-size: 28px;
+    letter-spacing: 2px;
+}
+#pantalla{
+    width: 100%;
+    height: 75px;
+
+    border: none;
+    outline: none;
+
+    border-radius: 15px;
+
+    margin-bottom: 20px;
+
+    padding: 15px;
+
+    font-size: 32px;
+
+    text-align: right;
+
+    background: rgba(255,255,255,0.12);
+
+    color: white;
+}
+
+.botones{
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 15px;
+}
+
+button{
+    height: 65px;
+
+    border: none;
+
+    border-radius: 15px;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    background: rgba(255,255,255,0.10);
+
+    color: white;
+
+    transition: 0.3s;
+}
+
+button:hover{
+    transform: scale(1.05);
+
+    background: rgba(255,255,255,0.20);
+}
+
+.operador{
+    background: #f59e0b;
+}
+
+.operador:hover{
+    background: #fbbf24;
+}
+
+.igual{
+    background: #22c55e;
+}
+
+.igual:hover{
+    background: #4ade80;
+}
+
+.cero{
+    grid-column: span 2;
+}
+@media screen and (max-width: 480px){
+
+    .calculadora{
+
+        max-width: 100%;
+
+        padding: 20px;
+
+        border-radius: 15px;
+    }
+
+    .calculadora h1{
+
+        font-size: 22px;
+    }
+
+    #pantalla{
+
+        height: 65px;
+
+        font-size: 26px;
+    }
+
+    button{
+
+        height: 55px;
+
+        font-size: 20px;
+    }
+
+    .botones{
+
+        gap: 10px;
+    }
+
+}
